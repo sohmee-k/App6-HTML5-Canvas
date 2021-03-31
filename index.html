@@ -45,6 +45,16 @@ function draw_on_canvas() {
 	var myCanvas_context = myCanvas_canvas.getContext("2d");
 	myCanvas_context.fillRect(50, 25, 150, 100); //specifies the size of rectangle to draw (50, 25, 150, 100)
 }
+	
+//function that writes my name -- Sohmee Kim -- on canvas
+function write_on_canvas() {
+	var myCanvas_canvas = document.getElementById("myCanvas"); 
+	var myCanvas_context = myCanvas_canvas.getContext("2d");
+	//myCanvas_context.textAlign = "right";
+	//myCanvas_context.textBaseline = "bottom";
+	myCanvas_context.font = "15px Arial"; // specifies the format of text to be written (15px, Arial)
+	myCanvas_context.fillText("Sohmee Kim", 10, 50); //specifies the text to be written (Sohmee Kim) & location of text on canvas (10, 50)
+}
 </script>
 
 
@@ -81,6 +91,10 @@ function draw_on_canvas() {
 	<!--creates button with instructions to click it to draw a rectangle. When clicked, calls draw_on_canvas() function and draws a rectangle-->
 	<p><a href="#draw" onclick="draw_on_canvas();" class="w3-btn w3-black"> Click to draw on canvas </a></p>
 		
+	<!--creates button with instructions to click it to write my name (Sohmee Kim) on canvas. When clicked, calls write_on_canvas()function 
+		and writes my name on canvas-->
+	<p><a href="#write" onclick="write_on_canvas();" class="w3-btn w3-black"> Click to write name on canvas </a></p>
+	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
