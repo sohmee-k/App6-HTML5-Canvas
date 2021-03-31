@@ -68,6 +68,13 @@ function load_image_on_canvas() {
 		myCanvas_context.drawImage(myImage, 0, 0); //specifies location of image (0, 0)
 	};
 }
+	
+//function that clears canvas
+function clear_canvas() {
+	var myCanvas_canvas = document.getElementById("myCanvas");
+	var myCanvas_context = myCanvas_canvas.getContext("2d");
+	myCanvas_context.clearRect(0, 0, myCanvas.width, myCanvas.height); //clears the entiriety of the canvas
+}
 </script>
 
 
@@ -110,7 +117,10 @@ function load_image_on_canvas() {
 	
 	<!--creates button with instructions to click it to load an image onto the canvas. When clicked, calls load_image_on_canvas()function 
 		and loads an image onto canvas-->
-	<p><a href="#image" onclick="load_image_on_canvas();" class="w3-btn w3-black"> Click to load image on to canvas </a></p>
+	<p><a href="#image" onclick="load_image_on_canvas();" class="w3-btn w3-black"> Click to load image on to canvas </a></p>	
+	
+	<!--creates button with instructions to click it to clear canvas. When clicked, calls clear_canvas() function and clears canvas-->
+	<p><a href="#reset" onclick="clear_canvas();" class="w3-btn w3-black"> Click to clear canvas </a></p>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
