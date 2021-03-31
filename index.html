@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Sohmee Kim
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,21 +17,27 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+A web app with a canvas and three buttons that (1) draws a rectangle on the canvas, (2) writes my name -- Sohmee Kim,
+and (3) clears or resets the canvas.
  
 Known Issues:
-blah, blah, blah, blah
+N/A
+
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
-   <head> 
-      <title>App6---HTML5-Canvas</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
-      <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+<!--header section-->	
+<head>
+	<!--title of webpage-->
+	<title>App6: HTML5-Canvas</title>  
+	<!--metadata-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--link out to other files-->
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="w3-colors-flat.css">
+</head> 
 
 
 <script>
@@ -78,8 +84,7 @@ function clear_canvas() {
 </script>
 
 
-
-<style>	
+<style>	/*style of wepage, similar to Hello World App*/
 .body {
      margin: 0em;
 }
@@ -101,12 +106,13 @@ function clear_canvas() {
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<!--header on webpage-->
+	<h1>App6--HTML5-Canvas</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<!-- creat canvas of size 500 by 300 with a solid black border of 5 px-->
-	<canvas id="myCanvas" width="500" height="300" style="border:5px solid #000000;"></canvas>
+	<!-- creates canvas of size 500 by 300 with a solid black border of 3 px-->
+	<canvas id="myCanvas" width="500" height="300" style="border:3px solid #000000;"></canvas>
 	
 	<!--creates button with instructions to click it to draw a rectangle. When clicked, calls draw_on_canvas() function and draws a rectangle-->
 	<p><a href="#draw" onclick="draw_on_canvas();" class="w3-btn w3-black"> Click to draw on canvas </a></p>
@@ -122,11 +128,13 @@ function clear_canvas() {
 	<!--creates button with instructions to click it to clear canvas. When clicked, calls clear_canvas() function and clears canvas-->
 	<p><a href="#reset" onclick="clear_canvas();" class="w3-btn w3-black"> Click to clear canvas </a></p>
 	
+	<!--information/disclaimer displayed for users-->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<!--footer-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
+	<!--what is displayed at the footer-->
 	<p>DIY!</p>
 </footer>
 
