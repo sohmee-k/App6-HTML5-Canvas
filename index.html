@@ -55,6 +55,19 @@ function write_on_canvas() {
 	myCanvas_context.font = "15px Arial"; // specifies the format of text to be written (15px, Arial)
 	myCanvas_context.fillText("Sohmee Kim", 10, 50); //specifies the text to be written (Sohmee Kim) & location of text on canvas (10, 50)
 }
+	
+//function that loads an image onto canvas
+function load_image_on_canvas() {
+	var myCanvas_canvas = document.getElementById("myCanvas");
+	var myCanvas_context = myCanvas_canvas.getContext("2d");
+	var myImage = new Image();
+	myImage.src = "https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/w-qjCHPZbeXCQ-unsplash.jpg"; //image source
+	
+	//loads image onto canvas using .onload function
+	myImage.onload = function() {
+		myCanvas_context.drawImage(myImage, 0, 0); //specifies location of image (0, 0)
+	};
+}
 </script>
 
 
@@ -94,6 +107,10 @@ function write_on_canvas() {
 	<!--creates button with instructions to click it to write my name (Sohmee Kim) on canvas. When clicked, calls write_on_canvas()function 
 		and writes my name on canvas-->
 	<p><a href="#write" onclick="write_on_canvas();" class="w3-btn w3-black"> Click to write name on canvas </a></p>
+	
+	<!--creates button with instructions to click it to load an image onto the canvas. When clicked, calls load_image_on_canvas()function 
+		and loads an image onto canvas-->
+	<p><a href="#image" onclick="load_image_on_canvas();" class="w3-btn w3-black"> Click to load image on to canvas </a></p>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
