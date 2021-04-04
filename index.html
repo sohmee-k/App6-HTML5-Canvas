@@ -17,8 +17,8 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-A web app with a canvas and three buttons that (1) draws a rectangle on the canvas, (2) writes my name -- Sohmee Kim,
-and (3) clears or resets the canvas.
+A web app with a canvas and four buttons that (1) draws a rectangle on the canvas, (2) writes my name -- Sohmee Kim,
+(3) loads an image, and (4) clears or resets the canvas.
  
 Known Issues:
 N/A
@@ -49,15 +49,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function draw_on_canvas() {
 	var myCanvas_canvas = document.getElementById("myCanvas");
 	var myCanvas_context = myCanvas_canvas.getContext("2d");
-	myCanvas_context.fillRect(50, 25, 150, 100); //specifies the size of rectangle to draw (50, 25, 150, 100)
+	myCanvas_context.fillRect(50, 25, 200, 300); //specifies the size of rectangle to draw (50, 25, 150, 100)
 }
 	
 //function that writes my name -- Sohmee Kim -- on canvas
 function write_on_canvas() {
 	var myCanvas_canvas = document.getElementById("myCanvas"); 
 	var myCanvas_context = myCanvas_canvas.getContext("2d");
-	//myCanvas_context.textAlign = "right";
-	//myCanvas_context.textBaseline = "bottom";
 	myCanvas_context.font = "15px Arial"; // specifies the format of text to be written (15px, Arial)
 	myCanvas_context.fillText("Sohmee Kim", 10, 50); //specifies the text to be written (Sohmee Kim) & location of text on canvas (10, 50)
 }
