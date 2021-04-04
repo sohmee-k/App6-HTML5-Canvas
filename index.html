@@ -49,7 +49,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function draw_on_canvas() {
 	var myCanvas_canvas = document.getElementById("myCanvas");
 	var myCanvas_context = myCanvas_canvas.getContext("2d");
-	myCanvas_context.fillRect(50, 25, 200, 300); //specifies the size of rectangle to draw (50, 25, 150, 100)
+	myCanvas_context.fillRect(100, 25, 200, 100); //specifies the  of rectangle to draw (50, 25, 150, 100)
 }
 	
 //function that writes my name -- Sohmee Kim -- on canvas
@@ -65,11 +65,11 @@ function load_image_on_canvas() {
 	var myCanvas_canvas = document.getElementById("myCanvas");
 	var myCanvas_context = myCanvas_canvas.getContext("2d");
 	var myImage = new Image();
-	myImage.src = "https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/w-qjCHPZbeXCQ-unsplash.jpg"; //image source
+	myImage.src = "https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/w-qjCHPZbeXCQ-unsplash.jpg"; //source of image
 	
 	//loads image onto canvas using .onload function
 	myImage.onload = function() {
-		myCanvas_context.drawImage(myImage, 0, 0); //specifies location of image (0, 0)
+		myCanvas_context.drawImage(myImage, 0, 0); //specifies location of image on canvas (0, 0)
 	};
 }
 	
@@ -113,7 +113,7 @@ function clear_canvas() {
 	<canvas id="myCanvas" width="500" height="300" style="border:3px solid #000000;"></canvas>
 	
 	<!--creates button with instructions to click it to draw a rectangle. When clicked, calls draw_on_canvas() function and draws a rectangle-->
-	<p><a href="#draw" onclick="draw_on_canvas();" class="w3-btn w3-black"> Click to draw on canvas </a></p>
+	<p><a href="#draw" onclick="draw_on_canvas();" class="w3-btn w3-black"> Click to draw a rectangle on canvas </a></p>
 		
 	<!--creates button with instructions to click it to write my name (Sohmee Kim) on canvas. When clicked, calls write_on_canvas()function 
 		and writes my name on canvas-->
@@ -121,7 +121,7 @@ function clear_canvas() {
 	
 	<!--creates button with instructions to click it to load an image onto the canvas. When clicked, calls load_image_on_canvas()function 
 		and loads an image onto canvas-->
-	<p><a href="#image" onclick="load_image_on_canvas();" class="w3-btn w3-black"> Click to load image on to canvas </a></p>	
+	<p><a href="#image" onclick="load_image_on_canvas();" class="w3-btn w3-black"> Click to load an image on to canvas </a></p>	
 	
 	<!--creates button with instructions to click it to clear canvas. When clicked, calls clear_canvas() function and clears canvas-->
 	<p><a href="#reset" onclick="clear_canvas();" class="w3-btn w3-black"> Click to clear canvas </a></p>
