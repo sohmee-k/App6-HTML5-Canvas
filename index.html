@@ -47,37 +47,37 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 //function that draws a rectangle onto canvas
 function draw_on_canvas() {
-	var myCanvas_canvas = document.getElementById("myCanvas"); //returns an element object represented by "myCanvas" (i.e., calls the canvas)
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); //returns a drawing context on the canvas
-	myCanvas_context.fillRect(100, 50, 200, 100); //specifies the location of rectangle to draw (50, 25, 150, 100)
+	var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
+	var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
+	myCanvas_context.fillRect(100, 50, 200, 100); // specifies the location of rectangle to draw (100, 50, 200, 100)
 }
 	
 //function that writes my name -- Sohmee Kim -- on canvas
 function write_on_canvas() {
-	var myCanvas_canvas = document.getElementById("myCanvas"); //returns an element object represented by "myCanvas" (i.e., calls the canvas)
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); //returns a drawing context on the canvas
+	var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
+	var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
 	myCanvas_context.font = "15px Arial"; // specifies the format of text to be written (15px, Arial)
-	myCanvas_context.fillText("Sohmee Kim", 10, 50); //specifies the text to be written (Sohmee Kim) & location of text on canvas (10, 50)
+	myCanvas_context.fillText("Sohmee Kim", 10, 50); // specifies the text to be written ('Sohmee Kim') & location of text on canvas (10, 50)
 }
 	
 //function that loads an image onto canvas
 function load_image_on_canvas() {
-	var myCanvas_canvas = document.getElementById("myCanvas"); //returns an element object represented by "myCanvas" (i.e., calls the canvas)
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); //returns a drawing context on the canvas
-	var myImage = new Image(); //creates new image element
-	myImage.src = "https://upload.wikimedia.org/wikipedia/commons/e/e6/Noto_Emoji_KitKat_263a.svg"; //provides source of image
+	var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
+	var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
+	var myImage = new Image(); // creates a new image element
+	myImage.src = "https://upload.wikimedia.org/wikipedia/commons/e/e6/Noto_Emoji_KitKat_263a.svg"; // provides source of image
 	
 	//loads image onto canvas using .onload function
 	myImage.onload = function() {
-		myCanvas_context.drawImage(myImage, 0, 0); //specifies location of image on canvas (0, 0)
+		myCanvas_context.drawImage(myImage, 0, 0); // specifies location of image on canvas (0, 0)
 	};
 }
 	
 //function that clears canvas
 function clear_canvas() {
-	var myCanvas_canvas = document.getElementById("myCanvas"); //returns an element object represented by "myCanvas" (i.e., calls the canvas)
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); //returns a drawing context on the canvas
-	myCanvas_context.clearRect(0, 0, myCanvas.width, myCanvas.height); //clears the entiriety of the canvas
+	var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
+	var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
+	myCanvas_context.clearRect(0, 0, myCanvas.width, myCanvas.height); // clears the entiriety of the canvas
 }
 </script>
 
@@ -115,11 +115,11 @@ function clear_canvas() {
 	<!--creates button with instructions to click it to draw a rectangle. When clicked, calls draw_on_canvas() function and draws a rectangle-->
 	<p><a href="#draw" onclick="draw_on_canvas();" class="w3-btn w3-black"> Click to draw a rectangle on canvas </a></p>
 		
-	<!--creates button with instructions to click it to write my name (Sohmee Kim) on canvas. When clicked, calls write_on_canvas()function 
+	<!--creates button with instructions to click it to write my name ('Sohmee Kim') on canvas. When clicked, calls write_on_canvas() function 
 		and writes my name on canvas-->
 	<p><a href="#write" onclick="write_on_canvas();" class="w3-btn w3-black"> Click to write name on canvas </a></p>
 	
-	<!--creates button with instructions to click it to load an image onto the canvas. When clicked, calls load_image_on_canvas()function 
+	<!--creates button with instructions to click it to load an image onto the canvas. When clicked, calls load_image_on_canvas() function 
 		and loads an image onto canvas-->
 	<p><a href="#image" onclick="load_image_on_canvas();" class="w3-btn w3-black"> Click to load an image on to canvas </a></p>	
 	
