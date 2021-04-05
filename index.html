@@ -41,65 +41,67 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-	
-//function that draws a rectangle onto canvas
-function draw_on_canvas() {
-	var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
-	myCanvas_context.fillRect(100, 50, 200, 100); // specifies the location of rectangle to draw (100, 50, 200, 100)
-}
-	
-//function that writes my name -- Sohmee Kim -- on canvas
-function write_on_canvas() {
-	var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
-	myCanvas_context.font = "15px Arial"; // specifies the format of text to be written (15px, Arial)
-	myCanvas_context.fillText("Sohmee Kim", 10, 50); // specifies the text to be written ('Sohmee Kim') & location of text on canvas (10, 50)
-}
-	
-//function that loads an image onto canvas
-function load_image_on_canvas() {
-	var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
-	var myImage = new Image(); // creates a new image element
-	myImage.src = "https://upload.wikimedia.org/wikipedia/commons/e/e6/Noto_Emoji_KitKat_263a.svg"; // provides source of image
-	
-	//loads image onto canvas using .onload function
-	myImage.onload = function() {
-		myCanvas_context.drawImage(myImage, 0, 0); // specifies location of image on canvas (0, 0)
-	};
-}
-	
-//function that clears canvas
-function clear_canvas() {
-	var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
-	myCanvas_context.clearRect(0, 0, myCanvas.width, myCanvas.height); // clears the entiriety of the canvas
-}
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+	//function that draws a rectangle onto canvas
+	function draw_on_canvas() {
+		var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
+		var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
+		myCanvas_context.fillRect(100, 50, 200, 100); // specifies the location of rectangle to draw (100, 50, 200, 100)
+	}
+
+	//function that writes my name -- Sohmee Kim -- on canvas
+	function write_on_canvas() {
+		var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
+		var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
+		myCanvas_context.font = "15px Arial"; // specifies the format of text to be written (15px, Arial)
+		myCanvas_context.fillText("Sohmee Kim", 10, 50); // specifies the text to be written ('Sohmee Kim') & location of text on canvas (10, 50)
+	}
+
+	//function that loads an image onto canvas
+	function load_image_on_canvas() {
+		var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
+		var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
+		var myImage = new Image(); // creates a new image element
+		myImage.src = "https://upload.wikimedia.org/wikipedia/commons/e/e6/Noto_Emoji_KitKat_263a.svg"; // provides source of image
+
+		// loads image onto canvas using .onload function
+		myImage.onload = function() {
+			myCanvas_context.drawImage(myImage, 0, 0); // specifies location of image on canvas (0, 0)
+		};
+	}
+
+	//function that clears canvas
+	function clear_canvas() {
+		var myCanvas_canvas = document.getElementById("myCanvas"); // loads the element object represented by "myCanvas" (i.e., the canvas) into myCanvas_canvas variable
+		var myCanvas_context = myCanvas_canvas.getContext("2d"); // loads the drawing context on the canvas into myCanvas_context variable
+		myCanvas_context.clearRect(0, 0, myCanvas.width, myCanvas.height); // clears the entiriety of the canvas
+	}
 </script>
 
 
 <style>	/*style of wepage, similar to Hello World App*/
-.body {
-     margin: 0em;
-}
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
+	.body {
+	     margin: 0em;
+	}
+	
+	.page {
+	    width: 100vw;
+	    height: 100vh;
+	    position: fixed;
+	    top: 0;
+	    left: -100vw;
+	    overflow-y: auto;
+	    z-index: 0;
+	    background-color: hsl(0,0%,100%);
+	}
+	
+	.page:target {
+	    left: 0vw;
+	    z-index: 1;
+	}
 </style>
 
 <body>
